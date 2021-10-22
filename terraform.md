@@ -31,7 +31,7 @@ We'll be automating the deployment of the VPC infrastructure below with Infrastr
   ```
   aws s3 mb s3://<bucket-name>
   ```
-## The VPC | Subnets | Security Groups
+## The VPC & Subnets 
 Let us create a directory structure.
 - Create a folder PBL
 - Create a file in the folder, name it *main.tf*
