@@ -491,8 +491,4 @@ Run ***terraform plan*** and ***terraform apply -auto-approve*** and ensure ever
 
 **Note**: Create a `.gitignore` file and add files such as `variables.tf`, `terraform.tfvars`, `.terraform.tfstate` etc., that contain sensitive information so  that it will not be tracked and exposed to the public on your version control software. e.g Github
 
-## Credits
-
-https://darey.io/docs/project-16-introduction/
-
 
