@@ -139,7 +139,7 @@ terraform destroy -auto-approve
 - Fixing Hard Coded Values: We will introduce variables, and remove hard coding.
 
     - Starting with the provider block, declare a variable named region, give it a default value, and update the provider section by referring to the declared variable.
-    
+
     ```
     variable "region" {
         default = "us-west-1"
@@ -148,7 +148,6 @@ terraform destroy -auto-approve
     provider "aws" {
         region = var.region
     }
-
     ```
     - Do the same to cidr value in the vpc block, and all the other arguments.
     
@@ -203,7 +202,7 @@ Let us fetch Availability zones from AWS, and replace the hard coded value in th
         state = "available"
         }
 ```
-To make use of this new data resource, we will need to introduce a count argument in the subnet block: Something like this.
+To make use of this new data resource, we will need to introduce a **count** argument in the subnet block: something like this.
 
 ```
 # Create public subnet1
@@ -239,7 +238,7 @@ We will introduce a function ***cidrsubnet()*** to make this happen. It accepts 
     resource "aws_subnet" "public" { 
         count                   = 2
         vpc_id                  = aws_vpc.main.id
-        cidr_block              = cidrsubnet(var.vpc_cidr, 4 , count.index)
+        cidr_block              = cidrsubnet(var.vpc_cidr, 8 , count.index)
         map_public_ip_on_launch = true
         availability_zone       = data.aws_availability_zones.available.names[count.index]
 
