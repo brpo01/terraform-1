@@ -368,7 +368,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "public" {
   count  = var.preferred_number_of_public_subnets == null ? length(data.aws_availability_zones.available.names) : var.preferred_number_of_public_subnets   
   vpc_id = aws_vpc.main.id
-  cidr_block              = cidrsubnet(var.vpc_cidr, 4 , count.index)
+  cidr_block              = cidrsubnet(var.vpc_cidr, 8 , count.index)
   map_public_ip_on_launch = true
   availability_zone       = data.aws_availability_zones.available.names[count.index]
 
@@ -413,7 +413,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "public" {
   count  = var.preferred_number_of_public_subnets == null ? length(data.aws_availability_zones.available.names) : var.preferred_number_of_public_subnets   
   vpc_id = aws_vpc.main.id
-  cidr_block              = cidrsubnet(var.vpc_cidr, 4 , count.index)
+  cidr_block              = cidrsubnet(var.vpc_cidr, 8 , count.index)
   map_public_ip_on_launch = true
   availability_zone       = data.aws_availability_zones.available.names[count.index]
 }
@@ -480,16 +480,12 @@ You should also have this file structure in the PBL folder.
 
 Run ***terraform plan*** and ***terraform apply -auto-approve*** and ensure everything works.
 
-![{60B91E88-B7FA-4933-BF89-89F584DF9B2D} png](https://user-images.githubusercontent.com/76074379/126080909-9e3d6395-f4e1-41e1-8117-d3c49a36b29f.jpg)
+
 
 **Note**: Create a `.gitignore` file and add files such as `variables.tf`, `terraform.tfvars`, `.terraform.tfstate` etc., that contain sensitive information so  that it will not be tracked and exposed to the public on your version control software. e.g Github
 
 ## Credits
 
 https://darey.io/docs/project-16-introduction/
-
-https://docs.chocolatey.org/en-us/choco/setup
-
-https://github.com/aws/aws-cli/issues/3567
 
 
