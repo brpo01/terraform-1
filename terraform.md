@@ -131,7 +131,7 @@ To destroy, run ***terraform destroy*** command, and type ***yes*** after evalua
 terraform destroy -auto-approve
 ```
 
-
+![Capture](https://user-images.githubusercontent.com/47898882/138507468-78728a3d-ed6b-436e-b498-cfd442f51427.JPG)
 
 
 ## Fixing The Problems By Code Refactoring
@@ -139,6 +139,7 @@ terraform destroy -auto-approve
 - Fixing Hard Coded Values: We will introduce variables, and remove hard coding.
 
     - Starting with the provider block, declare a variable named region, give it a default value, and update the provider section by referring to the declared variable.
+    
     ```
     variable "region" {
         default = "us-west-1"
@@ -147,6 +148,7 @@ terraform destroy -auto-approve
     provider "aws" {
         region = var.region
     }
+
     ```
     - Do the same to cidr value in the vpc block, and all the other arguments.
     
