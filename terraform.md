@@ -480,6 +480,8 @@ You should also have this file structure in the PBL folder.
 
 Run ***terraform plan*** and ***terraform apply -auto-approve*** and ensure everything works.
 
+![4](https://user-images.githubusercontent.com/47898882/138508673-a1a31485-b0bc-48c6-b356-045eab3da90d.JPG)
+
 ![5](https://user-images.githubusercontent.com/47898882/138508661-7b7ae365-229c-4dee-9fb7-1d9ea4d138b0.JPG)
 
 ![6](https://user-images.githubusercontent.com/47898882/138508669-8613dac8-9464-4443-b7c1-a970ffa8f2c3.JPG)
