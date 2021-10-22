@@ -132,6 +132,8 @@ terraform destroy -auto-approve
 ```
 
 
+
+
 ## Fixing The Problems By Code Refactoring
 
 - Fixing Hard Coded Values: We will introduce variables, and remove hard coding.
