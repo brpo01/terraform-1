@@ -254,7 +254,7 @@ Its parameters are *cidrsubnet(prefix, newbits, netnum)*
 
 You can experiment how this works by entering the **terraform console** and keep changing the figures to see the output.
 
-On the terminal, run ***terraform console***, type *cidrsubnet("172.16.0.0/16", 4, 0)*, Hit *enter*, see the output, keep changing the numbers and see what happens. To get out of the console, type *exit*
+On the terminal, run ***terraform console***, type *cidrsubnet("172.16.0.0/16", 8, 0)*, Hit *enter*, see the output, keep changing the numbers and see what happens. To get out of the console, type *exit*
 
 ### The final problem to solve is removing hard coded *count* value.
 If we cannot hard code a value we want, then we will need a way to dynamically provide the value based on some input. Since the *data* resource returns all the AZs within a region, it makes sense to count the number of AZs returned and pass that number to the *count* argument.
@@ -263,7 +263,7 @@ To do this, we can introduce *length()* function, which basically determines the
 
 Since *data.aws_availability_zones.available.names* returns a list like **["us-west-1b", "us-west-1c"]** we can pass it into a *length* function and get number of the AZs.
 
-***length(["us-west-1b", "us-west-1c"])***
+***length(["us-west-1a", "us-west-1b"])***
 
 Open up *terraform console* and try it
 
