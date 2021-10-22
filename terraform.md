@@ -110,13 +110,14 @@ We are creating 2 subnets, therefore declaring 2 resource blocks for each of the
 We are using the vpc_id argument to interpolate the value of the VPC id by setting it to aws_vpc.main.id. That way, terraform knows which VPC to create the subnet.
 Run *terraform plan* and *terraform apply -auto-approve*
 
-![{47AA2431-3056-4DDD-BF7A-7206BDD9970C} png](https://user-images.githubusercontent.com/76074379/126080568-e111c5bd-d707-4f93-85e6-c2279d7da61b.jpg)
+![7](https://user-images.githubusercontent.com/47898882/138507154-738d7ffd-fcfd-44f2-9c39-e3c8fc3967fd.JPG)
 
-![{A588F2CD-3219-4C04-90AA-32AC12B61E31} png](https://user-images.githubusercontent.com/76074379/126080294-99469a77-d97d-468a-b892-d128f22e5c03.jpg)
+![8](https://user-images.githubusercontent.com/47898882/138507138-ce1d6cf8-f56f-4a1b-b106-194e38584076.JPG)
+
+![9](https://user-images.githubusercontent.com/47898882/138507148-fb4a6189-584d-4cd8-b3e7-26fe42c4fc1d.JPG)
 
 
-
-#### Observations:
+### Observations:
 
 Hard coded values: Remember our best practice hint from the beginning? Both the availability_zone and cidr_block arguments are hard coded. We should always endeavour to make our work dynamic.
 
