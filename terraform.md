@@ -220,7 +220,7 @@ Let us quickly understand what is going on here.
 - The *data* resource will return a list object that contains a list of AZs. Internally, Terraform will receive the data like this
 
 ```
-["us-west-1b", "us-west-1c"]
+["us-west-1a", "us-west-1b"]
 ```
 
 Each of them is an index, the first one is ***index 0***, while the other is ***index 1***. If the data returned had more than 2 records, then the index numbers would continue to increment.
