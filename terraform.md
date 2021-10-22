@@ -17,9 +17,10 @@ We'll be automating the deployment of the VPC infrastructure below with Infrastr
        - Run Powershell, cmd or Gitbash as Administrator
        - Install aws CLI. Click [here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)
        - Install and configure Python SDK. Click [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)
-       - For easier authentication configuration - use AWS CLI with *aws configure* command. For guidance or help,run command
+       - For easier authentication configuration - use AWS CLI with *aws configure* command. There'll be a prompt requesting for the your access key id & sercet access key. This will enable you to deploy the infrastructure on your AWS account using terraform.
+
          ```
-         aws configure help
+         aws configure 
          ```
        - Install chocolatey. Click [here](https://docs.chocolatey.org/en-us/choco/setup)
        - Install Terraform.
