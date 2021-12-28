@@ -201,7 +201,7 @@ Let us fetch Availability zones from AWS, and replace the hard coded value in th
 # Get list of availability zones
         data "aws_availability_zones" "available" {
         state = "available"
-        }
+}
 ```
 To make use of this new data resource, we will need to introduce a **count** argument in the subnet block: something like this.
 
